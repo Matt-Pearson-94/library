@@ -1,3 +1,106 @@
-h1 {
-    color: blue;
+body {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: rgb(180, 206, 179);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 8fr 1fr;
+    height: 100vh;
+    width: 90%;
+}
+
+.header {
+    grid-row: 1 / span 1;
+    background-color: rgb(136, 160, 168);
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+}
+
+.add-book-col {
+    grid-row: 2 / span 1 ;
+}
+
+.main {
+    grid-row: 3 / -3;
+    position: relative;
+    height: 100%;
+}
+
+.footer {
+    grid-row: -2 / span 1;
+}
+
+.header-title {
+    font-size: 3em;
+    font-weight: 900;
+    color: rgb(250, 212, 216);
+}
+
+.add-book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(250, 212, 216);
+    border-radius: 5px;
+    width: fit-content;
+    position: absolute;
+    right: 47%;
+    margin: 10px;
+    padding: 10px;
+}
+
+.add-book > div {
+    font-size: 1.5em;
+    color: whitesmoke;
+}
+
+#add-button {
+    font-size: 2em;
+}
+
+.add-book:hover {
+    background-color: rgb(250, 212, 216, 0.8);
+    cursor: pointer;
+    scale: 1.05;
+    transition: .2s;
+}
+
+.add-book:active {
+    background-color: rgb(250, 212, 216, 0.6);
+}
+
+.right {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    padding: 25px;
+}
+
+.book-container {
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
+    gap: 25px;
+    /* grid-template-rows: repeat( auto-fit, minmax(100px, 1fr) ); */
+    border: 2px solid red;
+    height: max-content;
+}
+
+.books {
+    height: 350px;
+    border: 2px solid black;
+
+}
+
+.footer {
+    border: 2px solid red;
 }
