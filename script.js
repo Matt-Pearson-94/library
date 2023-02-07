@@ -14,14 +14,14 @@ function addBookToLibrary() {
     console.log(myLibrary)
 }
 
-// console.log(book1)
-// myLibrary.push(book1)
-// myLibrary.push(book2)
-// console.log(myLibrary)
+console.log(book1)
+myLibrary.push(book1)
+myLibrary.push(book2)
+console.log(myLibrary)
 
-// console.log(myLibrary[0])
+console.log(myLibrary[1])
 
-// const button = document.querySelector('.add-book')
+const button = document.querySelector('.add-book')
 
 const main = document.querySelector('.main')
 
