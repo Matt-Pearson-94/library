@@ -16,7 +16,6 @@ body {
     width: 90%;
     min-width: 1200px;
     min-height: 1000px;
-    border: 2px solid blue;
 }
 
 .header {
@@ -101,9 +100,9 @@ body {
 
 }
 
-.footer {
+/* .footer {
 
-}
+} */
 
 .main-header {
     color: rgb(250, 212, 216);
