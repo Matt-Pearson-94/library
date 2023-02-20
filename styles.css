@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-    background-color: rgb(180, 206, 179);
+    background-color: rgb(187, 239, 251);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 8fr 1fr;
@@ -20,7 +20,7 @@ body {
 
 .header {
     grid-row: 1 / span 1;
-    background-color: rgb(136, 160, 168);
+    background-color: rgb(64, 186, 227);
     display: flex;
     align-items: center;
     padding-left: 100px;
@@ -43,7 +43,7 @@ body {
 .header-title {
     font-size: 3em;
     font-weight: 900;
-    color: rgb(250, 212, 216);
+    color: rgb(255, 255, 255);
 }
 
 .add-book {
@@ -51,7 +51,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background-color: rgb(250, 212, 216);
+    background-color: rgb(212, 246, 250);
     border-radius: 5px;
     width: fit-content;
     position: absolute;
@@ -77,7 +77,7 @@ body {
 }
 
 .add-book:active {
-    background-color: rgb(250, 212, 216, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 .right {
@@ -97,6 +97,8 @@ body {
 
 .books {
     height: 350px;
+    width: 350[x];
+    background-color: aliceblue;
 
 }
 
