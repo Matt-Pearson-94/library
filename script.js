@@ -1,35 +1,19 @@
-let myLibrary = [];
-
-function Book(author, title, pages, isRead) {
-  this.author = author;
-  this.title = title;
-  this.pages = pages;
-  this.isRead = isRead;
+class newBook {
+    constructor(name, author, numOfPages, isRead) {
+        this.name = name
+        this.author = author
+        this.numOfPages = numOfPages
+        this.isRead = isRead
+    }
 }
 
-const book1 = new Book('J.K. Rowling', 'Harry Potter and the Deathly Hallows', 501, true)
-const book2 = new Book('Stephen King', 'The Shining', 253, false)
-
-function addBookToLibrary() {
-  catalog.appendChild(book)
-    
-}
+const book1 = new newBook('Harry Potter', 'J.K Rowling', 325, 'Yes')
 
 console.log(book1)
-myLibrary.push(book1)
-myLibrary.push(book2)
-console.log(myLibrary)
 
-console.log(myLibrary[1])
+const form = document.querySelector('.form')
+const addBook = document.querySelector('.addbookbutton')
 
-const button = document.querySelector('.add-book')
-const catalog = document.querySelector('.book-container')
-const main = document.querySelector('.main')
-const book = document.createElement('div')
-book.classList.add('books')
-
-document.querySelector('.add-book').addEventListener("click", addBookToLibrary)
-
-function getBook() {
-    alert('hello world')
-}
+addBook.addEventListener('click', event => {
+    form.style.display = 'block'
+})

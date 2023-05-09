@@ -1,116 +1,93 @@
 body {
-    background-color: white;
+    background-color: rgba(238, 250, 255, 0.592);
     font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
     margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.container {
-    background-color: rgb(187, 239, 251);
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 8fr 1fr;
-    height: 100vh;
-    width: 90%;
-    min-width: 1200px;
-    min-height: 1000px;
 }
 
 .header {
-    grid-row: 1 / span 1;
-    background-color: rgb(64, 186, 227);
     display: flex;
-    align-items: center;
-    padding-left: 100px;
+    height: 100px;
+    width: 100%;
+    font-size: 50px;
+    margin-bottom: 25px;
 }
 
-.add-book-col {
-    grid-row: 2 / span 1 ;
+.heading {
+    background-color: blue;
+    color: aliceblue;
+    width: 100%;
+    padding: 20px 0 15px 50px;
 }
 
-.main {
-    grid-row: 3 / -3;
+.js-logo {
+    background-color: yellow;
+    width: 100px;
     position: relative;
-    height: 100%;
+    font-weight: 600;
+    font-size: 40px;
+    border: 2px solid rgb(30, 30, 30);
+}
+
+.js-text {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 10px 10px 0;
+    color: rgb(50, 50, 50);
+}
+
+.default {
+    width: auto;
+    height: auto;
+}    
+
+.content {
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    /* grid-template-columns: 1fr; */
 }
 
 .footer {
-    grid-row: -2 / span 1;
-}
-
-.header-title {
-    font-size: 3em;
-    font-weight: 900;
-    color: rgb(255, 255, 255);
-}
-
-.add-book {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    background-color: rgb(212, 246, 250);
-    border-radius: 5px;
-    width: fit-content;
     position: absolute;
-    right: 47%;
-    margin: 10px;
-    padding: 10px;
-}
-
-.add-book > div {
-    font-size: 1.5em;
-    color: whitesmoke;
-}
-
-#add-button {
-    font-size: 2em;
-}
-
-.add-book:hover {
-    background-color: rgb(250, 212, 216, 0.8);
-    cursor: pointer;
-    scale: 1.05;
-    transition: .2s;
-}
-
-.add-book:active {
-    background-color: rgba(255, 255, 255, 0.6);
-}
-
-.right {
+    bottom: 0;
     width: 100%;
-    display: flex;
-    justify-content: end;
-    gap: 10px;
-    padding: 25px;
+    background-color: blue;
+    font-size: large;
+    color: aliceblue;
+    padding: 10px;
+    margin-top: 20px;
 }
 
-.book-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr) );
-    gap: 25px;
-    height: max-content;
+.addbookbutton {
+    grid-row: 0/1;
+    margin-left: 50%;
+    width: fit-content;
+    padding: 15px 25px;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+}
+.addbookbutton:hover {
+    background-color: blueviolet;
+    /* font-size: 110%; */
+    transform: scale(1.1);
 }
 
-.books {
-    height: 350px;
-    width: 350[x];
-    background-color: aliceblue;
-
+.addbookbutton:active {
+    padding: 15px 25px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
 }
 
-/* .footer {
+.main-content {
+    grid-row: 2/-1;
+}
 
-} */
-
-.main-header {
-    color: rgb(250, 212, 216);
-    font-size: 2em;
-    font-weight: bold;
-    margin: 0px 25px 25px 25px;
-    border-bottom: 4px solid rgb(136, 160, 168);
-    padding-bottom: 5px;
+.form {
+    display: none;
+    width: 150px;
+    gap: 20px;
 }
