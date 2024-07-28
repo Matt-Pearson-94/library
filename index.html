@@ -2,58 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-    <title>Library</title>
 </head>
 <body>
+    <div class="title-container">
+        <img class="odin-logo" src="img/4441966.png" alt="odin-logo">
+        <div class="title">myLibrary [ ] </div>
+        <div class="read-log">
+            <div class="log-header">// Library Log </div>
+            <div class="book-count">Total books: <span id="total-books">0</span></div>
+            <div class="read-count">Total read: <span id="read-books">0</span></div>
+            <div class="not-read-count">Total not-read: <span id="not-read-count">0</span></div>
+        </div>
 
-<div class="header">
-    <div class="js-logo">
-        <div class="js-text">JS</div>
     </div>
-    <div class="heading">
-        <div>BookLibrary[]</div>
-    </div>
-</div>
-
-<div class="content">
-    <div class="addbookbutton">Add book +</div>
-    <div class="main-content">Testing</div>
-    
-</div>
-
-<div class="footer">Book Library Matt Pearson</div>
-
-<div class="form">
-    <form action="http://httpbin.org/post" method="post">
-        <fieldset>
-        <legend id="title">Add a book</legend>
-        <div class="input">
-            <div>    
-                <label for="book-name"></label>
-                <input type="text" name="book-name" id="book-name" minlength="3" placeholder="Name of book" required>
-            </div>
-            <div>    
-                <label for="author"></label>
-                <input type="text" name="author" id="author" minlength="3" placeholder="Author" required>
-            </div>
-            <div>    
-                <label for="pageno"></label>
-                <input type="number" name="pageno" id="pageno" minlength="11" maxlength="11" placeholder="Number of pages" required>
-            </div>
-            <div>    
-                <label for="switch">Have you read it?</label>
-                    <input type="checkbox">
-                    <span class="slider"></span>
-            </div>
-        <button type="submit" class="button">Add book</button>
-    </form>
-</div>
-
-
-
+    <button class="add-button" onclick="addBook(this)">Add book + </button>
+    <div class="main-contents-container"></div>
 </body>
 </html>
