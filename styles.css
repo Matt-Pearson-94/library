@@ -48,16 +48,23 @@ body {
     margin-bottom: 10px;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
 .add-button {
-    position: absolute;
-    left: 45%;
-    margin-top: 10px;
-    width: 125px;
+    /* position: absolute;
+    left: 47%; */
+    margin-top: 2%;
+    width: 150px;
     height: 35px;
-    background-color: rgba(180, 36, 36, 0.837);
+    background-color: rgba(180, 36, 36, 0.712);
     border-radius: 3%;
-    border: 1px solid brown;
+    border: 2px dashed brown;
     cursor: pointer;
+    color: rgb(247, 235, 220);
+    font-size: larger;
 }
 
 .add-button:hover {
@@ -72,7 +79,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-top: 75px;
+    margin-top: 40px;
 
 }
 
@@ -83,4 +90,98 @@ body {
     background-color: rgba(165, 42, 42, 0.588);
     border-radius: 5px;
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+}
+
+.book-card > * {
+    color: rgb(255, 221, 194);
+    font-weight: 900;
+    justify-content: space-evenly;
+}
+
+.book-card > :last-child {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 40px;
+    margin-bottom: 10px;
+}
+
+.pop-up-container {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    z-index: 100;
+}
+
+.pop-up-form {
+    width: 350px;
+    height: 300px;
+    border: 3px dashed brown;
+    background-color: rgb(201, 125, 81);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 5px;
+    position: relative
+}
+
+.pop-up-form > form > * {
+    width: 90%;
+    margin: 10px;
+    color: rgb(255, 221, 194);
+    font-size: larger;
+}
+
+form > :nth-last-child(2) {
+    width: 20px;
+    height: 20px;
+    color: red;
+}
+
+form > :last-child {
+    width: 100px;
+    color: black;
+}
+
+.pop-up-background {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    width: 100vw;
+    height: 200vh;
+    background-color: rgba(56, 56, 56, 0.87);
+}
+
+.close {
+    width: 40px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid black;
+    background-color: white;
+    position: absolute;
+    margin: 20px 20px;
+    top: 0;
+    right: 0;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.close:hover {
+    background-color: rgb(230, 230, 230)
+}
+
+.close:active {
+    background-color: rgb(202, 202, 202)
 }
