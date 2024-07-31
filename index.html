@@ -28,20 +28,22 @@
     <div class="main-contents-container"></div>
     <div class="pop-up-container">
         <div class="pop-up-form">
-           <form>
-               <label for="author">Author:</label>
-               <input type="text" id="author">
-               <label for="title">Title:</label>
-               <input type="text" id="title">
-               <label for="num-of-pages">Number of pages:</label>
-               <input type="text" id="pages-num">
-               <label for="num-of-pages">Have read:</label>
-               <input type="checkbox" id="have-read">
-               <input type="submit" value="Submit">
+           <form id="form-data">
+                <div>Add Book +</div>
+               <!-- <label for="author">Author:</label> -->
+               <input type="text" id="author" name="author" placeholder="Author">
+               <!-- <label for="title">Title:</label> -->
+               <input type="text" id="title" name="title" placeholder="Title">
+               <!-- <label for="numberOfPages">Number of pages:</label> -->
+               <input type="number" min="1" id="numberOfPages" name="numberOfPages" placeholder="Number of pages">
+               <label for="haveRead">Have read:</label>
+               <input type="checkbox" id="haveRead" name="haveRead">
+               <button type="submit">Submit</button>
            </form>
         </div>
     </div>
     <button class="remove" onclick="removeBook()">Remove Book</button>
+    <div class="footer">Copywrite @ MPearson. Library project from The Odin Project</div>
     
 </body>
 </html>
