@@ -219,7 +219,7 @@ form > :last-child {
 }
 
 .footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     border-top: 1px solid black;
     width: 100%;
@@ -228,4 +228,23 @@ form > :last-child {
     color: rgb(255, 232, 232);
     font-weight: 700;
     text-align: center;
+    margin-top: 50px;
+}
+
+.remove-button {
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid black;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: brown;
+    cursor: pointer;
+}
+
+.remove-button:hover {
+    background-color: rgb(134, 32, 32);
 }

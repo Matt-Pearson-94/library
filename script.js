@@ -4,9 +4,10 @@ const popupBlockBackground = document.querySelector('.pop-up-background')
 const closeButton = document.querySelector('.close')
 const totalBooks = document.querySelector('#total-books')
 const  totalReadBooks = document.querySelector('#read-books')
-
+const totalNotReadBooks = document.querySelector('#not-read-count')
 let totalBookCount = 0
 let totalReadCount = 0
+let totalNotReadCount = 0
 
 const myLibrary = [
     // {
@@ -39,15 +40,21 @@ function createBook() {
                 const bookTitle = document.createElement('div')
                 const numPages = document.createElement('div')
                 const haveRead = document.createElement('div')
+                const removeButton = document.createElement('button')
+                removeButton.textContent = 'X'
+                removeButton.classList.add('remove-button')
                 newCard.classList.add('book-card')
+                myLibrary[i].index = i
                 authorName.textContent = `Author: ${myLibrary[i].author}`
                 bookTitle.textContent = `Title: ${myLibrary[i].title}`
                 numPages.textContent = `Number of pages: ${myLibrary[i].numberOfPages}`
                 haveRead.setAttribute('id', 'haveRead')
                 haveRead.classList.add('have-read')
+                removeButton.setAttribute('index', i)
                 myLibrary[i].haveRead === 'on' ? haveRead.textContent = 'Read' : haveRead.textContent = 'Not Read'
                 myLibrary[i].haveRead === 'on' ? haveRead.style.backgroundColor = 'rgb(123, 255, 123)' : haveRead.style.backgroundColor = 'rgb(255, 94, 94)'
                 mainContents.appendChild(newCard)
+                newCard.append(removeButton)
                 newCard.appendChild(authorName)
                 newCard.appendChild(bookTitle)
                 newCard.appendChild(numPages)
@@ -57,6 +64,7 @@ function createBook() {
                 readButtonArray = Array.from(readButton)
                 totalBookCount ++
                 totalBooks.textContent = totalBookCount
+                console.log(myLibrary)
                 readBooksCount()
         }
     }
@@ -85,14 +93,20 @@ document.getElementById('form-data').addEventListener('submit', function(event) 
     createBook()
 })
 
-
-// function removeBook() {
-// }
-
 document.addEventListener('click', e => {
+    console.log(e.target)
     if (e.target.matches('.have-read')) {
-        e.target.textContent === 'Read' ? (e.target.textContent = 'Not Read') && (e.target.style.backgroundColor = 'rgb(255, 94, 94)')  : (e.target.textContent = 'Read' ) && (e.target.style.backgroundColor = 'rgb(123, 255, 123)')
-    } 
+        e.target.textContent === 'Read' ? (e.target.textContent = 'Not Read') && (e.target.style.backgroundColor = 'rgb(255, 94, 94)') : (e.target.textContent = 'Read' ) && (e.target.style.backgroundColor = 'rgb(123, 255, 123)')
+        readBooksCount()
+    } else if (e.target.getAttribute('index')) {
+        console.log(e.target.getAttribute('index'))
+        myLibrary.splice(Number(e.target.getAttribute('index')),1)
+        console.log(myLibrary)
+        myLibraryLength--
+        totalBookCount--
+        e.target.parentElement.style.display = 'none'
+
+    }
 })
 
 function readBooksCount() {
@@ -100,6 +114,7 @@ function readBooksCount() {
     myLibrary.forEach(item => {
         item.haveRead === 'on' ? totalReadCount ++ : console.log('no')
         totalReadBooks.textContent = totalReadCount
-
+        totalNotReadCount = totalBookCount - totalReadCount
+        totalNotReadBooks.textContent = totalNotReadCount
     })
 }
