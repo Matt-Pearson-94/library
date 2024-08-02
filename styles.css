@@ -248,3 +248,8 @@ form > :last-child {
 .remove-button:hover {
     background-color: rgb(134, 32, 32);
 }
+
+.main-contents-container {
+    height: fit-content;
+    margin-bottom: 50px;
+}
